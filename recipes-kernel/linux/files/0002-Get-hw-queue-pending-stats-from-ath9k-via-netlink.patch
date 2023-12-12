@@ -382,7 +382,7 @@ index 535e34a84d65..1064d30b5ca3 100644
  static bool nl80211_valid_wpa_versions(u32 wpa_versions)
  {
  	return !(wpa_versions & ~(NL80211_WPA_VERSION_1 |
-@@ -14853,6 +14938,11 @@ static const struct genl_small_ops nl80211_small_ops[] = {
+@@ -14853,6 +14938,10 @@ static const struct genl_small_ops nl80211_small_ops[] = {
  		.internal_flags = NL80211_FLAG_NEED_NETDEV_UP |
  				  NL80211_FLAG_NEED_RTNL,
  	},
