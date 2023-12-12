@@ -351,7 +351,7 @@ index 535e34a84d65..1064d30b5ca3 100644
 +	int res;
 +
 +	// printk(KERN_ALERT "%s:%d\n", __FILE__, __LINE__);
-+	res = nl80211_prepare_wdev_dump(skb, cb, &rdev, &wdev);
++	res = nl80211_prepare_wdev_dump(cb, &rdev, &wdev);
 +	if (res)
 +		return res;
 +
