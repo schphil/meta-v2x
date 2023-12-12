@@ -388,7 +388,6 @@ index 535e34a84d65..1064d30b5ca3 100644
  	},
 +	{
 +		.cmd = NL80211_CMD_FLUSH_STATS,
-+		.policy = nl80211_policy,
 +		.dumpit = nl80211_dump_flush_stats
 +	},
  	{
