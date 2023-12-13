@@ -1,4 +1,4 @@
-FILESEXTRAPATHS:prepend  := "${THISDIR}/files:"
+FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 
 SRC_URI += "file://db_80211p.txt"
 # SRC_URI += "file://root.key.pub.pem"
