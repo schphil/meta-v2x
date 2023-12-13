@@ -1,5 +1,3 @@
-RDEPENDS:packagegroup-base-wifi = "\
-    iw \
-    wireless-regdb \
-    ${WIRELESS_DAEMON} \
-"
+FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
+
+SRC_URI += "file://rdepends.patch"

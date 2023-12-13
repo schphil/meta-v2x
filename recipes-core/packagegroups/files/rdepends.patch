@@ -1,0 +1,12 @@
+diff --git a/meta/recipes-core/packagegroups/packagegroup-base.bb b/meta/recipes-core/packagegroups/packagegroup-base.bb
+index 70a1035003..53b9fa2f62 100644
+--- a/meta/recipes-core/packagegroups/packagegroup-base.bb
++++ b/meta/recipes-core/packagegroups/packagegroup-base.bb
+@@ -263,7 +263,7 @@ WIRELESS_DAEMON ??= "wpa-supplicant"
+ SUMMARY:packagegroup-base-wifi = "WiFi support"
+ RDEPENDS:packagegroup-base-wifi = "\
+     iw \
+-    wireless-regdb-static \
++    wireless-regdb \
+     ${WIRELESS_DAEMON} \
+ "
