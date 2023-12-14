@@ -116,11 +116,11 @@ index e60d4737fc6e..20c9223327a4 100644
 +	if (sc->flush_hw_q_pending) {
 +		if (ath9k_hw_numtxpending(ah, txq->axq_qnum)) {
 +			// printk(KERN_ALERT "flush and pending!");
-+			TX_STAT_INC(txq->axq_qnum, hw_flush_required);
++			TX_STAT_INC(sc, txq->axq_qnum, hw_flush_required);
 +
 +		} else {
 +			// printk(KERN_ALERT "flush but nothing pending in queues!");
-+			TX_STAT_INC(txq->axq_qnum, hw_flush_not_required);
++			TX_STAT_INC(sc, txq->axq_qnum, hw_flush_not_required);
 +		}
 +	}
 +
