@@ -9,7 +9,7 @@ SRC_URI += "file://80211pconfig"
 KBUILD_DEFCONFIG_mx6 = "${WORKDIR}/80211pconfig"
 
 do_unpack_append(){
-    cp ${WORKDIR}/80211pconfig ${S}/arch/${ARCH}/configs/
+    cp ${KERNEL_DEFCONFIG} ${S}/arch/${ARCH}/configs/yocto_defconfig
 }
 
 COMPATIBLE_MACHINE = "(mx6|mx7|mx8)"
