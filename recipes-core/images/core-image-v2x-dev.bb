@@ -12,6 +12,6 @@ IMAGE_FEATURES += "splash ssh-server-openssh"
 IMAGE_INSTALL += "\
     dhcpcd iptables rsync minicom evtest vsftpd db vim openssl openssh libnl \
     libnl-dev libgcrypt libgpg-error wireless-regdb crda make libgcrypt pciutils \
-    python-subprocess pkgconfig gcc \
+    pkgconfig gcc \
     packagegroup-core-boot packagegroup-core-full-cmdline \
     "
