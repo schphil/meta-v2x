@@ -3,8 +3,12 @@ hardware."
 
 LICENSE = "MIT"
 
-require recipes-core/images/core-image-base.bb
+inherit core-image-base
 
-IMAGE_INSTALL:append = " dhcpcd iptables rsync minicom evtest vsftpd db vim openssl openssh libnl libnl-dev libgcrypt libgpg-error wireless-regdb crda make libgcrypt pciutils python python-m2crypto python-subprocess pkgconfig"
-IMAGE_INSTALL:remove = " linux-firmware-bcm4330 "
-CORE_IMAGE_EXTRA_INSTALL = " python-core python-pip gcc"
+# the deploy code requires bash and
+# normal linux utilities not busybox ones
+IMAGE_INSTALL += "\
+    dhcpcd iptables rsync minicom evtest vsftpd db vim openssl openssh libnl \
+    libnl-dev libgcrypt libgpg-error wireless-regdb crda make libgcrypt pciutils \
+    python python-m2crypto python-subprocess pkgconfig python-core python-pip gcc \
+    "
