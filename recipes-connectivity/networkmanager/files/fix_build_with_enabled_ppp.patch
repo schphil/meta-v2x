@@ -1,7 +1,7 @@
-diff --git a/meta-networking/recipes-connectivity/networkmanager/networkmanager_1.36.2.bb b/meta-networking/recipes-connectivity/networkmanager/networkmanager_1.36.2.bb
+diff --git a/networkmanager_1.36.2.bb b/networkmanager_1.36.2.bb
 index 6c665d53bb..e3b1296a6b 100644
---- a/meta-networking/recipes-connectivity/networkmanager/networkmanager_1.36.2.bb
-+++ b/meta-networking/recipes-connectivity/networkmanager/networkmanager_1.36.2.bb
+--- a/networkmanager_1.36.2.bb
++++ b/networkmanager_1.36.2.bb
 @@ -83,7 +83,7 @@  PACKAGECONFIG[bluez5] = "-Dbluez5_dun=true,-Dbluez5_dun=false,bluez5"
  # consolekit is not picked by shlibs, so add it to RDEPENDS too
  PACKAGECONFIG[consolekit] = "-Dsession_tracking_consolekit=true,-Dsession_tracking_consolekit=false,consolekit,consolekit"
