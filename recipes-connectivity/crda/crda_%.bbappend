@@ -1,1 +1,1 @@
-RDEPENDS_${PN} = "udev"
+RDEPENDS:${PN} = "udev wireless-regdb"
