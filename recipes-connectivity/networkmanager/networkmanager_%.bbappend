@@ -1,3 +1,7 @@
-FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
+#FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
 
-#SRC_URI += "file://fix_build_with_enabled_ppp.patch"
+SRC_URI += "file://fix_build_with_enabled_ppp.patch"
+
+do_patch_append() {
+    patch -p1 < ${WORKDIR}/fix_build_with_enabled_ppp.patch
+}
