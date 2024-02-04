@@ -1,4 +1,4 @@
-FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
+FILESEXTRAPATHS:prepend := "${THISDIR}/${PN}:"
 
 SRC_URI += "file://0001-ath9k-ocb.patch"
 #SRC_URI += "file://0001-pcie-designware.patch"
