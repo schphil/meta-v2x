@@ -1,7 +1,7 @@
 FILESEXTRAPATHS:prepend := "${THISDIR}/${PN}:"
 
 SRC_URI:append = " \
-	file://80211p.cfg \
+	file://wireguard.cfg \
 "
 
 do_configure:prepend() {
