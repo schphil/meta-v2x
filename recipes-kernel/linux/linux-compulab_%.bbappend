@@ -4,9 +4,13 @@ SRC_URI:append = " \
 	file://wireguard.cfg \
 "
 
-do_configure:prepend() {
-    # Configuration fragments add support
-    for cfg_frag in ${WORKDIR}/*.cfg;do
-        cat ${cfg_frag} >> ${S}/arch/arm64/configs/compulab.config
-    done
+#do_configure:prepend() {
+#    # Configuration fragments add support
+#    for cfg_frag in ${WORKDIR}/*.cfg;do
+#        cat ${cfg_frag} >> ${S}/arch/arm64/configs/compulab.config
+#    done
+#}
+
+do_configure:append () {
+    oe_runmake ${MACHINE}_defconfig
 }
