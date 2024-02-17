@@ -1,5 +1,6 @@
 FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
 
+SRC_URI += "file://makefile.patch"
 SRC_URI += "file://db_80211p.txt"
 
 do_patch() {
