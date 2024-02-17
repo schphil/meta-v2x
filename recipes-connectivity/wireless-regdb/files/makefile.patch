@@ -1,0 +1,15 @@
+diff --git a/Makefile b/Makefile
+index c99fcb6..c9debe6 100644
+--- a/Makefile
++++ b/Makefile
+@@ -57,11 +57,11 @@ mrproper: clean maintainer-clean
+ 
+ regulatory.bin: db.txt $(REGDB_PRIVKEY) $(REGDB_PUBKEY)
+        @echo Generating $@ digitally signed by $(REGDB_AUTHOR)...
+-       ./db2bin.py regulatory.bin db.txt $(REGDB_PRIVKEY)
++       python3 ./db2bin.py regulatory.bin db.txt $(REGDB_PRIVKEY)
+ 
+ regulatory.db: db.txt db2fw.py
+        @echo "Generating $@"
+-       ./db2fw.py regulatory.db db.txt
++       python3 ./db2fw.py regulatory.db db.txt
