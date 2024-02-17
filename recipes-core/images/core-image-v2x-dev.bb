@@ -11,7 +11,7 @@ IMAGE_FEATURES += "splash ssh-server-openssh"
 # normal linux utilities not busybox ones
 IMAGE_INSTALL += "\
     dhcpcd iptables rsync minicom evtest vsftpd db vim openssl openssh libnl \
-    libnl-dev libgcrypt libgpg-error crda make pciutils \
+    libnl-dev libgcrypt libgpg-error libgcrypt11-dev crda make pciutils \
     pkgconfig gcc wireless-regdb python3-m2crypto \
     packagegroup-core-boot packagegroup-core-full-cmdline \
     "
