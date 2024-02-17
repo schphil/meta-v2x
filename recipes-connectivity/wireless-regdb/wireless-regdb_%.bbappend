@@ -7,3 +7,12 @@ do_patch() {
     # cp ${WORKDIR}/root.key.pub.pem ${B}/
     # cp ${WORKDIR}/linville.key.pub.pem ${B}/
 }
+
+do_install() {
+    install -d -m0755 ${D}${nonarch_libdir}/crda
+    install -d -m0755 ${D}${sysconfdir}/wireless-regdb/pubkeys
+    install -m 0644 regulatory.bin ${D}${nonarch_libdir}/crda/regulatory.bin
+    install -m 0644 sforshee.key.pub.pem ${D}${sysconfdir}/wireless-regdb/pubkeys/sforshee.key.pub.pem
+    install -m 0644 -D regulatory.db ${D}${nonarch_base_libdir}/firmware/regulatory.db
+    install -m 0644 regulatory.db.p7s ${D}${nonarch_base_libdir}/firmware/regulatory.db.p7s
+}
