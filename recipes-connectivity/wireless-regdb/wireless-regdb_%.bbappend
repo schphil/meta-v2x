@@ -9,10 +9,6 @@ do_patch() {
     # cp ${WORKDIR}/linville.key.pub.pem ${B}/
 }
 
-do_compile () {
-    make
-}
-
 do_install() {
     install -d -m0755 ${D}${nonarch_libdir}/crda
     install -d -m0755 ${D}${sysconfdir}/wireless-regdb/pubkeys
