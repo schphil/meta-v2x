@@ -10,8 +10,7 @@ do_patch() {
 }
 
 do_compile () {
-    # You will almost certainly need to add additional arguments here
-    oe_runmake
+    make
 }
 
 do_install() {
