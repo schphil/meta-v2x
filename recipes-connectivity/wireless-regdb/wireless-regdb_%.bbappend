@@ -9,6 +9,11 @@ do_patch() {
     # cp ${WORKDIR}/linville.key.pub.pem ${B}/
 }
 
+do_compile () {
+    # You will almost certainly need to add additional arguments here
+    oe_runmake
+}
+
 do_install() {
     install -d -m0755 ${D}${nonarch_libdir}/crda
     install -d -m0755 ${D}${sysconfdir}/wireless-regdb/pubkeys
