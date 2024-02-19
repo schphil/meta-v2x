@@ -10,7 +10,7 @@ do_patch() {
 }
 
 do_compile() {
-    oe_runmake
+    oe_runmake all_noverify
 }
 
 do_install() {
